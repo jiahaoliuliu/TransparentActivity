@@ -20,7 +20,7 @@ public class NewActivity extends Activity {
         notClickableButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(NewActivity.this, "You should not be able to see this", Toast.LENGTH_LONG).show();
+                Toast.makeText(NewActivity.this, "Message from the activity behind", Toast.LENGTH_LONG).show();
             }
         });
     }
