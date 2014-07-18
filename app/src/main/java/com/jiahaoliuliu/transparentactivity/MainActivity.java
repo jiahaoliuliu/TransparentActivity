@@ -20,7 +20,7 @@ public class MainActivity extends ActionBarActivity {
         startNewActivityButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent startNewActivityIntent = new Intent(MainActivity.this, NewActivity.class);
+                Intent startNewActivityIntent = new Intent(MainActivity.this, TransparentActivity.class);
                 startActivity(startNewActivityIntent);
             }
         });
