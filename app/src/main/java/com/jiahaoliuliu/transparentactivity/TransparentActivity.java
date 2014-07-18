@@ -1,10 +1,9 @@
 package com.jiahaoliuliu.transparentactivity;
 
+import android.app.Activity;
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
 
-
-public class TransparentActivity extends ActionBarActivity {
+public class TransparentActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
