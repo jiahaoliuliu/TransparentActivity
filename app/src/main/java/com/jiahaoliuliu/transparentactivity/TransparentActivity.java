@@ -44,4 +44,10 @@ public class TransparentActivity extends Activity {
 
         getWindow().setAttributes(params);
     }
+
+    @Override
+    public void onBackPressed() {
+        // Not do anything because when the user press on the back
+        // this activity will disappear.
+    }
 }
