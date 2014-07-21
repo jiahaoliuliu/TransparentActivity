@@ -1,17 +1,15 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     tools:context=".TransparentActivity"
-    android:weightSum="2"
     >
 
     <TextView
         android:text="@string/transparent_activity_text_short"
-        android:layout_width="0dp"
+        android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:layout_weight="1"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:gravity="center"
     />
