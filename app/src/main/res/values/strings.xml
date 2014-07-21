@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">TransparentActivity</string>
+    <string name="app_name">Transparent Activity</string>
     <string name="start_new_activity">Start new activity</string>
     <string name="new_activity_text">New Activity</string>
     <string name="transparent_activity_text_short">Transparent activity</string>
