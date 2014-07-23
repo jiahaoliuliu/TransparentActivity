@@ -39,15 +39,32 @@ public class TransparentActivity extends Activity {
         params.x = 0 - screenSize.x/2;
         params.y = 0 - screenSize.y/2;
 
-        params.width = screenSize.x/2;
-        params.height = screenSize.y;
-
         getWindow().setAttributes(params);
+        showWindows();
+        //hideWindows();
     }
 
     @Override
     public void onBackPressed() {
         // Not do anything because when the user press on the back
         // this activity will disappear.
+    }
+
+    private void showWindows() {
+        WindowManager.LayoutParams params = getWindow().getAttributes();
+        // Set the size of the screen to use the half left part of the screen.
+        params.width = screenSize.x / 2;
+        params.height = screenSize.y;
+
+        getWindow().setAttributes(params);
+    }
+
+    private void hideWindows() {
+        WindowManager.LayoutParams params = getWindow().getAttributes();
+        // Set the size of the screen to use the half left part of the screen.
+        params.width = 0;
+        params.height = 0;
+
+        getWindow().setAttributes(params);
     }
 }
