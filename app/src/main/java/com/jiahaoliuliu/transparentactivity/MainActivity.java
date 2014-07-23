@@ -1,6 +1,7 @@
 package com.jiahaoliuliu.transparentactivity;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -13,21 +14,25 @@ public class MainActivity extends Activity {
 
     private Button startNewActivityButton;
 
+    private Context context;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_activity_layout);
+
+        context = this;
+
         startNewActivityButton = (Button)findViewById(R.id.startNewActivityButton);
         startNewActivityButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Start a new activity
-                Intent startNewActivityIntent = new Intent(MainActivity.this, NewActivity.class);
-                startActivity(startNewActivityIntent);
-
-                // Trying to start a new activity over it
-                Intent startTransparentActivityIntent = new Intent(MainActivity.this, TransparentActivity.class);
-                startActivity(startTransparentActivityIntent);
+                // Start the transparent activity going to the home
+                Intent i = new Intent(MainActivity.this, TransparentActivity.class);
+                i.setAction(Intent.ACTION_MAIN);
+                i.addCategory(Intent.CATEGORY_HOME);
+                startActivity(i);
+                finish();
             }
         });
     }
