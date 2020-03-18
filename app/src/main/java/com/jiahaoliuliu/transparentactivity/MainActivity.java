@@ -9,13 +9,14 @@ import android.widget.Button;
 
 public class MainActivity extends Activity {
 
+    private static final String TAG = "TransparentActivity";
+
     private Button startNewActivityButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_activity_layout);
-
         startNewActivityButton = (Button)findViewById(R.id.startNewActivityButton);
         startNewActivityButton.setOnClickListener(new View.OnClickListener() {
             @Override
